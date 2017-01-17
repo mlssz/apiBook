@@ -19,7 +19,7 @@ FORMAT: 0.0.1
 +Response (json)
 	
 	{
-		"status" :0/1,	//0为发送失败，1为发送成功
+		"status" :0\1,	//0为发送失败，1为发送成功
 	}
 
 ## 请求登陆[/url]
@@ -35,6 +35,6 @@ FORMAT: 0.0.1
 +Response (json)
 
 	{
-		"status" 	: 0/1,	//0为登陆失败，1为登陆成功
+		"status" 	: 0\1,	//0为登陆失败，1为登陆成功
 		"token"		:		//格式由@oeil确认
 	}
