@@ -12,7 +12,7 @@ FORMAT: 0.0.1
 +Request (json)
 
 	{
-		"phone" : 12345678901		//phone为11位数字
+		"phone" : 12345678901,		//phone为11位数字
 		"timestamp"	: 1484635014000	//timestamp精确到毫秒
 	}
 
@@ -28,13 +28,13 @@ FORMAT: 0.0.1
 +Request (json)
 
 	{
-		"phone" : 12345678901
+		"phone" : 12345678901,
 		"code"	: 123456		//验证码为6位数字
 	}
 
 +Response (json)
 
 	{
-		"status" 	: 0/1	//0为登陆失败，1为登陆成功
+		"status" 	: 0/1,	//0为登陆失败，1为登陆成功
 		"token"		:	格式由@oeil确认
 	}
