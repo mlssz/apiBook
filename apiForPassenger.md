@@ -22,19 +22,25 @@ FORMAT: 0.0.1
 		"status" :0\1,	//0为发送失败，1为发送成功
 	}
 
-## 请求登录[/url]
+## 请求登录[/haoyun/s/rent/login.json]
 用户发送登录请求，登录系统
 
 +Request (json)
 
 	{
-		"phone" : 12345678901,
-		"code"	: 123456,		//验证码为6位数字
+		"account" : 12345678901,
+		"position"	: x,y,
+		"timestamp"	: 1484635014000
 	}
 
 +Response (json)
-
+成功：
 	{
-		"status" 	: 0\1,	//0为登录失败，1为登录成功
-		"token"		:		//格式由@oeil确认
+		"status" 	: 1,	//0为登录失败，1为登录成功
+		"rental"	:{"id":1,"account":"17764591386","name":"无名","registTime":1487858596000,"lastlogin":1487858596000,"token":"c671e0a32b42419e84f8023a4d0ca5dd8e4d7312cdd5449a857da7e269398d38","type":1,"position":"128,123","score":0}
+	}
+失败:
+	{
+		"status" 	: 0,	   //0为登录失败，1为登录成功
+		"msg"		: 失败的原因	//格式由@oeil确认
 	}
