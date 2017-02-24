@@ -3,6 +3,8 @@ FORMAT: 0.0.1
 # tips
 此api仅用于乘客端，api调用的接口地址(url)请@oeil补充完整
 
+用户服务器地址：https://www.oeli.pub:80
+
 # 用户登录模块
 用于用户登录的api
 
