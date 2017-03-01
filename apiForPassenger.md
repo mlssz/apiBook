@@ -46,24 +46,23 @@ FORMAT: 0.0.1
 		"msg"		: "失败的原因"	//格式由@oeil确认
 	}
 
-# 地图模块
+# Group 地图模块
 用于位置操作的api
 
-## 租车人附近汽车查询
+## 租车人附近的汽车 [/rent/near_lessees{?uid, token, positionx, positiony, limit}]
+
+### 显示所有附近汽车 [GET]
 
     GET /rent/near_lessees
+    
++ Parameters
+    + uid (number, required) - 用户id
+    + token (string, required) - 用户token
+    + positionx (number, required) - 用户经度值
+    + positiony (number, required) - 用户维度值
+    + limit (number, required) - 范围，单位米(M)
 
-+Request (json)
-
-	{
-		"uid":0,		//用户id
-		"token":"",		//用户token
-		"mypositionx":0,//用户经度值
-		"mypositiony":0,//用户维度值
-		"limit":20		//范围，单位米(M)
-	}
-
-+Response (array)
++ Response 200 (application/json)
 
 	[{
 		"id":1,
