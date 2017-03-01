@@ -49,7 +49,10 @@ FORMAT: 0.0.1
 # 地图模块
 用于位置操作的api
 
-## 租车人附近汽车查询[/rent/findnearlessee.json]
+## 租车人附近汽车查询
+
+    GET /rent/near_lessees
+
 +Request (json)
 
 	{
