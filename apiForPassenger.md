@@ -79,13 +79,15 @@ FORMAT: 1A
 
         [
           {
-            "id":1,
-            "account":"17764591386",
-            "name":"无名",
-            "registTime":"1487858596000",
-            "lastlogin":"1487858596000",
-            "token":"c671e0a32b42419e84f8023a4d0ca5dd8e4d7312cdd5449a857da7e269398d38",
-            "type":2,
+            "user": {
+              "id":1,
+              "account":"17764591386",
+              "name":"无名",
+              "signup_time":"1487858596000",
+              "pre_login_time":"1487858596000",
+              "token":"c671e0a32b42419e84f8023a4d0ca5dd8e4d7312cdd5449a857da7e269398d38",
+              "type":2,
+            },
             "positionX":128.6846866,
             "positionY":12.6146,
             "score":"0"
