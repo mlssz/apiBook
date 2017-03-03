@@ -486,7 +486,7 @@
                   <h3>GET</h3>
                 </div>
                 <a class="ui basic fluid green label">
-                  <code>/rent/near_lessees{?uid, token, positionx, positiony, limit}</code>
+                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit}</code>
                 </a>
               </div>
               
@@ -558,7 +558,7 @@
       <td><code>limit</code></td>
       <td class="center aligned">
         <code>number</code>
-        
+        <code class="ui label">20</code>
       </td>
       <td class="eight wide"><p>范围，单位米(M)</p>
 </td>
@@ -621,6 +621,150 @@
     &#34;score&#34;:&#34;0&#34;
   },
 ]
+</code>
+                      </pre>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="schema">
+                      <pre style="white-space: inherit">
+                        <code class="language-json"></code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <h4 class="ui horizontal divider">
+                REQUEST
+              </h4>
+              <div class="description"></div>
+              <div class="fluid ui large labeled button">
+                <div class="ui green large button">
+                  <h3>GET</h3>
+                </div>
+                <a class="ui basic fluid green label">
+                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit}</code>
+                </a>
+              </div>
+              
+                
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="4">Parameters</th>
+    </tr>
+  <thead>
+  <tbody>
+  
+    <tr>
+      <td class="center aligned one wide">
+        <i class="ui empty circular label black" data-content="required" data-position="top center"></i>
+      </td>
+      <td><code>uid</code></td>
+      <td class="center aligned">
+        <code>number</code>
+        
+      </td>
+      <td class="eight wide"><p>用户id</p>
+</td>
+    </tr>
+  
+    <tr>
+      <td class="center aligned one wide">
+        <i class="ui empty circular label black" data-content="required" data-position="top center"></i>
+      </td>
+      <td><code>token</code></td>
+      <td class="center aligned">
+        <code>string</code>
+        
+      </td>
+      <td class="eight wide"><p>用户token</p>
+</td>
+    </tr>
+  
+    <tr>
+      <td class="center aligned one wide">
+        <i class="ui empty circular label black" data-content="required" data-position="top center"></i>
+      </td>
+      <td><code>positionx</code></td>
+      <td class="center aligned">
+        <code>number</code>
+        
+      </td>
+      <td class="eight wide"><p>用户经度值</p>
+</td>
+    </tr>
+  
+    <tr>
+      <td class="center aligned one wide">
+        <i class="ui empty circular label black" data-content="required" data-position="top center"></i>
+      </td>
+      <td><code>positiony</code></td>
+      <td class="center aligned">
+        <code>number</code>
+        
+      </td>
+      <td class="eight wide"><p>用户维度值</p>
+</td>
+    </tr>
+  
+    <tr>
+      <td class="center aligned one wide">
+        <i class="ui empty circular label black" data-content="required" data-position="top center"></i>
+      </td>
+      <td><code>limit</code></td>
+      <td class="center aligned">
+        <code>number</code>
+        <code class="ui label">20</code>
+      </td>
+      <td class="eight wide"><p>范围，单位米(M)</p>
+</td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              
+              
+              
+
+              <h4 class="ui horizontal divider">RESPONSE</h4>
+              <div class="description"></div>
+              
+<table class="ui celled definition table">
+  <thead>
+    <tr>
+      <th colspan="2">Headers</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td class="four wide">Content-Type</td>
+      <td><code>application/json</code></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+              <div class="ui stacked orange segment">
+                <div class="ui fluid transaction accordion">
+                  <div class="title center aligned">
+                    <a class="ui orange circular label">
+                      403
+                    </a>
+                    <code>application/json</code>
+                  </div>
+                  <div class="content tabbed">
+                    <div class="ui top attached tabular menu">
+                      <a data-tab="body" class="active item">BODY</a>
+                      <a data-tab="schema" class="item">SCHEMA</a>
+                    </div>
+                    <div class="ui bottom attached active tab segment" data-tab="body">
+                      <pre style="white-space: inherit">
+                        <code class="language-json">// 没有权限
+{
+    &#34;detail&#34;:&#34;身份认证信息未提供。&#34;
+}
 </code>
                       </pre>
                     </div>

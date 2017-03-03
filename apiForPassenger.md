@@ -64,7 +64,7 @@ FORMAT: 1A
 
 用于位置操作的api
 
-## 显示租车人附近的汽车 [GET /rent/near_lessees{?uid, token, positionx, positiony, limit}]
+## 显示租车人附近的汽车 [GET /rent/{uid}/near_lessees{?token, positionx, positiony, limit}]
 
 根据租车人与货车主的经纬度，获取租车人附近的货车主们。
 
@@ -73,7 +73,7 @@ FORMAT: 1A
     + token (string, required) - 用户token
     + positionx (number, required) - 用户经度值
     + positiony (number, required) - 用户维度值
-    + limit (number, required) - 范围，单位米(M)
+    + limit: `20` (number, required) - 范围，单位米(M)
 
 + Response 200 (application/json)
 
@@ -94,3 +94,9 @@ FORMAT: 1A
           },
         ]
 
++ Response 403 (application/json)
+
+        // 没有权限
+        {
+            "detail":"身份认证信息未提供。"
+        }
