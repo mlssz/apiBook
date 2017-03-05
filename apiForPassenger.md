@@ -100,3 +100,51 @@ FORMAT: 1A
         {
             "detail":"身份认证信息未提供。"
         }
+
+## 上传客户相关信息 [/rent/upload]
+
+文件大小不得超过1M，编码为UTF-8
+
+### 上传 [POST]
+
++ Request <success> (text/html)
+
+    //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)、头像(head)
+    {
+        "uid":0,
+        "token":"",
+        "type":""，
+        "file":file
+    }
+
++ Response 200 (application/json)
+
+    //成功
+    { 
+        "status": 1
+    }
+    //失败
+    {
+        "status":0,
+        "msg":""
+    }
+
+## 下载证件照片 [/rent/download]
+
+### 下载 [GET]
+
++ Request <success> (text/html)
+
+    //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)、头像(head)
+    {
+        "uid":0,
+        "token":"",
+        "type":""
+    }
+
++ Response 200 (file)
+
+    //成功
+    文件流
+    //失败
+    错误信息
