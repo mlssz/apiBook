@@ -8,9 +8,9 @@ FORMAT: 1A
 
 # 货车司机用户组
 
-## 注册 [/lessee/regist]
+## 请求注册 [/lessee/regist]
 
-### 请求注册 [POST]
+### 注册 [POST]
 
 + Request <success> (text/html)
 
@@ -49,9 +49,10 @@ FORMAT: 1A
         "msg":""
     }
 
-## 完成个人信息 [/lessee/finishmyinfo]
 
-### 请求完成个人信息 [POST]
+## 请求完成个人信息 [/lessee/finishmyinfo]
+
+### 完成个人信息 [POST]
 
 + Request <success> (text/html)
 
@@ -91,9 +92,9 @@ FORMAT: 1A
         "msg":""
     }
 
-## 登陆 [/lessee/regist]
+## 请求登陆 [/lessee/regist]
 
-### 请求登陆 [POST]
+### 登陆 [POST]
 
 + Request <success> (text/json)
 
@@ -132,9 +133,10 @@ FORMAT: 1A
         "msg":""
     }
 
-## 货车 [/lessee/addatruck]
 
-### 添加一个货车 [POST]
+## 添加一个货车 [/lessee/addatruck]
+
+### 添加 [POST]
 
 + Request <success> (text/html)
 
@@ -164,9 +166,9 @@ FORMAT: 1A
     }
 
 
-## 货车 [/lessee/findmytrucks]
+## 查看自己的货车列表 [/lessee/findmytrucks]
 
-### 查看自己的货车列表 [POST]
+### 查看 [POST]
 
 + Request <success> (text/html)
 
@@ -212,3 +214,52 @@ FORMAT: 1A
         "status":0,
         "msg":""
     }
+
+
+## 上传货车相关信息 [/lessee/upload]
+
+文件大小不得超过1M，编码为UTF-8
+
+### 上传 [POST]
+
++ Request <success> (text/html)
+
+    //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)
+    {
+        "uid":0,
+        "token":"",
+        "type":""，
+        "file":file
+    }
+
++ Response 200 (application/json)
+
+    //成功
+    { 
+        "status": 1
+    }
+    //失败
+    {
+        "status":0,
+        "msg":""
+    }
+
+## 下载证件照片 [/lessee/download]
+
+### 下载 [GET]
+
++ Request <success> (text/html)
+
+    //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)
+    {
+        "uid":0,
+        "token":"",
+        "type":""
+    }
+
++ Response 200 (file)
+
+    //成功
+    文件流
+    //失败
+    错误信息
