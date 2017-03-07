@@ -22,7 +22,7 @@ FORMAT: 1A
         {
             "account": "12345678901",
             "position": "x,y",
-            "timestamp": 1484635014000
+            "code": "" //验证码
         }
 
 + Response 200 (application/json)
