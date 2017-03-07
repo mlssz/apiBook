@@ -25,6 +25,7 @@ FORMAT: 1A
 + Response 200 (application/json)
 
     //成功
+    
     {
         "lessee": {
             "id": 23, 
@@ -43,7 +44,9 @@ FORMAT: 1A
         }, 
         "status": 1
     }
+    
     //失败
+    
     {
         "status":0,
         "msg":""
@@ -67,6 +70,7 @@ FORMAT: 1A
 + Response 200 (application/json)
 
     //成功
+    
     {
         "lessee": {
             "id": 23, 
@@ -87,6 +91,7 @@ FORMAT: 1A
 }
 
     //失败
+    
     {
         "status":0,
         "msg":""
@@ -109,6 +114,7 @@ FORMAT: 1A
 + Response 200 (application/json)
 
     //成功
+    
     {
         "lessee": {
             "id": 16, 
@@ -127,7 +133,9 @@ FORMAT: 1A
         }, 
         "status": 1
     }
+    
     //失败
+    
     {
         "status":0,
         "msg":""
@@ -156,10 +164,13 @@ FORMAT: 1A
 + Response 200 (application/json)
 
     //成功
+    
     {
         "status": 1
     }
+    
     //失败
+    
     {
         "status":0,
         "msg":""
@@ -180,6 +191,7 @@ FORMAT: 1A
 + Response 200 (application/json)
 
     //成功
+    
     {
         "trucks": [
             {
@@ -209,7 +221,9 @@ FORMAT: 1A
         ], 
         "status": 1
     }
+    
     //失败
+    
     {
         "status":0,
         "msg":""
@@ -225,6 +239,7 @@ FORMAT: 1A
 + Request <success> (text/html)
 
     //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)、头像(head)
+    
     {
         "uid":0,
         "token":"",
@@ -235,10 +250,13 @@ FORMAT: 1A
 + Response 200 (application/json)
 
     //成功
+    
     { 
         "status": 1
     }
+    
     //失败
+    
     {
         "status":0,
         "msg":""
@@ -251,6 +269,7 @@ FORMAT: 1A
 + Request <success> (text/html)
 
     //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)、头像(head)
+    
     {
         "uid":0,
         "token":"",
