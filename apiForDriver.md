@@ -19,7 +19,7 @@ FORMAT: 1A
         "password":"sdafsad",
         "positionx":0,
         "positiony":0,
-        "code":""
+        "code":"" //验证码
     }
 
 + Response 200 (application/json)
@@ -282,3 +282,32 @@ FORMAT: 1A
     文件流
     //失败
     错误信息
+
+## 语音验证码 [/yzm/yuyin/{type}]
+
+{type}是一个自定义字符，依据调用api的名字来输入，如果是登陆会用到/lessee/regist，那么{type}用regist替换
+
+### 验证码 [POST]
+
++ Request <success> (text/html)
+
+    //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)、头像(head)
+
+        {
+            "phone":0
+        }
+
++ Response 200 (application/json)
+
+    //成功
+        
+        { 
+            "status": 1
+        }
+
+    //失败
+
+        {
+            "status":0,
+            "msg":""
+        }
