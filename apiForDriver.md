@@ -59,43 +59,43 @@ FORMAT: 1A
 
 + Request <success> (text/html)
 
-    {
-        "uid":0,
-        "token":"",
-        "nickname":"",
-        "realname":"",
-        "ci":""
-    }
+        {
+            "uid":0,
+            "token":"",
+            "nickname":"",
+            "realname":"",
+            "ci":""
+        }
 
 + Response 200 (application/json)
 
     //成功
     
-    {
-        "lessee": {
-            "id": 23, 
-            "account": "17764591382", 
-            "name": "oeli", 
-            "registTime": 1488425454000, 
-            "lastlogin": 1488425454000, 
-            "token": "9c37255a9beb420893125c54d1269dc03e09d4663d2c4b6085f83503b840f8cc", 
-            "type": 4, 
-            "positionX": 21.23443, 
-            "positionY": 32.56, 
-            "score": 0, 
-            "realName": "事物", 
-            "ci": "511622199608324566", 
-            "password": ""
-    }, 
-    "status": 1
-}
+        {
+            "lessee": {
+                "id": 23, 
+                "account": "17764591382", 
+                "name": "oeli", 
+                "registTime": 1488425454000, 
+                "lastlogin": 1488425454000, 
+                "token": "9c37255a9beb420893125c54d1269dc03e09d4663d2c4b6085f83503b840f8cc", 
+                "type": 4, 
+                "positionX": 21.23443, 
+                "positionY": 32.56, 
+                "score": 0, 
+                "realName": "事物", 
+                "ci": "511622199608324566", 
+                "password": ""
+        }, 
+        "status": 1
+    }
 
     //失败
     
-    {
-        "status":0,
-        "msg":""
-    }
+        {
+            "status":0,
+            "msg":""
+        }
 
 ## 请求登陆 [/lessee/regist]
 
