@@ -4,7 +4,7 @@ FORMAT: 1A
 
 货车司机API说明文档
 
-- 服务器地址 http://www.oeli.pub/s
+- 服务器地址 http://www.oeli.pub/haoyun/s
 
 # 货车司机用户组
 
