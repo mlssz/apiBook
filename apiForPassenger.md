@@ -114,7 +114,7 @@ FORMAT: 1A
         "uid":0,
         "token":"",
         "type":""，
-        "file":file
+        "file":file //enctype="multipart/form-data"
     }
 
 + Response 200 (application/json)

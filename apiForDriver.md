@@ -4,7 +4,7 @@ FORMAT: 1A
 
 货车司机API说明文档
 
-- 服务器地址 http://www.oeli.pub/s
+- 服务器地址 http://www.oeli.pub/haoyun/s
 
 # 货车司机用户组
 
@@ -97,7 +97,7 @@ FORMAT: 1A
             "msg":""
         }
 
-## 请求登陆 [/lessee/regist]
+## 请求登陆 [/lessee/login]
 
 ### 登陆 [POST]
 
@@ -244,7 +244,7 @@ FORMAT: 1A
             "uid":0,
             "token":"",
             "type":""，
-            "file":file
+            "file":file //enctype="multipart/form-data"
         }
 
 + Response 200 (application/json)
