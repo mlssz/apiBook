@@ -103,43 +103,43 @@ FORMAT: 1A
 
 + Request <success> (text/json)
 
-    {
-        "phone":12345678910,
-        "password":"sdafsad",
-        "positionx":0,
-        "positiony":0,
-        "code":""
-    }
+        {
+            "phone":12345678910,
+            "password":"sdafsad",
+            "positionx":0,
+            "positiony":0,
+            "code":""
+        }
 
 + Response 200 (application/json)
 
     //成功
     
-    {
-        "lessee": {
-            "id": 16, 
-            "account": "17764591381", 
-            "name": "无名", 
-            "registTime": 1488379162000, 
-            "lastlogin": 1488379162000, 
-            "token": "f520338fb5b64f05b3baf86a200cdd91d8c595e75f22461dbf2fd46761b558cc", 
-            "type": 4, 
-            "positionX": 232, 
-            "positionY": 324, 
-            "score": 0, 
-            "realName": "", 
-            "ci": "", 
-            "password": ""
-        }, 
-        "status": 1
-    }
+        {
+            "lessee": {
+                "id": 16, 
+                "account": "17764591381", 
+                "name": "无名", 
+                "registTime": 1488379162000, 
+                "lastlogin": 1488379162000, 
+                "token": "f520338fb5b64f05b3baf86a200cdd91d8c595e75f22461dbf2fd46761b558cc", 
+                "type": 4, 
+                "positionX": 232, 
+                "positionY": 324, 
+                "score": 0, 
+                "realName": "", 
+                "ci": "", 
+                "password": ""
+            }, 
+            "status": 1
+        }
     
     //失败
     
-    {
-        "status":0,
-        "msg":""
-    }
+        {
+            "status":0,
+            "msg":""
+        }
 
 
 ## 添加一个货车 [/lessee/addatruck]
@@ -148,33 +148,33 @@ FORMAT: 1A
 
 + Request <success> (text/html)
 
-    {
-        "uid":0,
-        "token":"",
-        "no":"",
-        "load":0,
-        "width":0,
-        "height":0,
-        "length":0,
-        "type":0,
-        "moreinfo":"",
-        "remark":""
-    }
+        {
+            "uid":0,
+            "token":"",
+            "no":"",
+            "load":0,
+            "width":0,
+            "height":0,
+            "length":0,
+            "type":0,
+            "moreinfo":"",
+            "remark":""
+        }
 
 + Response 200 (application/json)
 
     //成功
     
-    {
-        "status": 1
-    }
+        {
+            "status": 1
+        }
     
     //失败
     
-    {
-        "status":0,
-        "msg":""
-    }
+        {
+            "status":0,
+            "msg":""
+        }
 
 
 ## 查看自己的货车列表 [/lessee/findmytrucks]
@@ -183,51 +183,51 @@ FORMAT: 1A
 
 + Request <success> (text/html)
 
-    {
-        "uid":0,
-        "token":""
-    }
+        {
+            "uid":0,
+            "token":""
+        }
 
 + Response 200 (application/json)
 
     //成功
     
-    {
-        "trucks": [
-            {
-                "id": 2, 
-                "lessee": 1, 
-                "no": "asuifia", 
-                "loads": 556, 
-                "width": 1232.234, 
-                "height": 0, 
-                "length": 213, 
-                "type": 4, 
-                "moreinfo": "sadasd", 
-                "remark": "sdfdsf"
-            }, 
-            {
-                "id": 3, 
-                "lessee": 1, 
-                "no": "asuifia", 
-                "loads": 556, 
-                "width": 1232.234, 
-                "height": 0, 
-                "length": 213, 
-                "type": 4, 
-                "moreinfo": "sadasd", 
-                "remark": "sdfdsf"
-            }
-        ], 
-        "status": 1
-    }
+        {
+            "trucks": [
+                {
+                    "id": 2, 
+                    "lessee": 1, 
+                    "no": "asuifia", 
+                    "loads": 556, 
+                    "width": 1232.234, 
+                    "height": 0, 
+                    "length": 213, 
+                    "type": 4, 
+                    "moreinfo": "sadasd", 
+                    "remark": "sdfdsf"
+                }, 
+                {
+                    "id": 3, 
+                    "lessee": 1, 
+                    "no": "asuifia", 
+                    "loads": 556, 
+                    "width": 1232.234, 
+                    "height": 0, 
+                    "length": 213, 
+                    "type": 4, 
+                    "moreinfo": "sadasd", 
+                    "remark": "sdfdsf"
+                }
+            ], 
+            "status": 1
+        }
     
     //失败
     
-    {
-        "status":0,
-        "msg":""
-    }
+        {
+            "status":0,
+            "msg":""
+        }
 
 
 ## 上传货车相关信息 [/lessee/upload]
@@ -240,27 +240,27 @@ FORMAT: 1A
 
     //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)、头像(head)
     
-    {
-        "uid":0,
-        "token":"",
-        "type":""，
-        "file":file
-    }
+        {
+            "uid":0,
+            "token":"",
+            "type":""，
+            "file":file
+        }
 
 + Response 200 (application/json)
 
     //成功
     
-    { 
-        "status": 1
-    }
+        { 
+            "status": 1
+        }
     
     //失败
     
-    {
-        "status":0,
-        "msg":""
-    }
+        {
+            "status":0,
+            "msg":""
+        }
 
 ## 下载证件照片 [/lessee/download]
 
@@ -270,11 +270,11 @@ FORMAT: 1A
 
     //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)、头像(head)
     
-    {
-        "uid":0,
-        "token":"",
-        "type":""
-    }
+        {
+            "uid":0,
+            "token":"",
+            "type":""
+        }
 
 + Response 200 (file)
 
