@@ -291,10 +291,8 @@ FORMAT: 1A
 
 + Request <success> (text/html)
 
-    //type 有 身份证(sfz)、车牌(cp)、车辆登记证书(djz)、驾驶证(jsz)、车辆正面照(zmz)、头像(head)
-
         {
-            "phone":0
+            "phone":0 //电话号码
         }
 
 + Response 200 (application/json)
