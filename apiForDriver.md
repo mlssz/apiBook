@@ -14,13 +14,13 @@ FORMAT: 1A
 
 + Request <success> (text/html)
 
-    {
-        "phone":12345678910,
-        "password":"sdafsad",
-        "positionx":0,
-        "positiony":0,
-        "code":"" //验证码
-    }
+        {
+                "phone":12345678910,
+                "password":"sdafsad",
+                "positionx":0,
+                "positiony":0,
+                "code":"" //验证码
+        }
 
 + Response 200 (application/json)
 

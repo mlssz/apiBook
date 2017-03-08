@@ -148,3 +148,143 @@ FORMAT: 1A
     文件流
     //失败
     错误信息
+
+
+# 常用线路管理
+
+## 获得一个用户所有的线路 [GET /line/getAllByUserId]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":""
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "lines":[]
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+## 获得该用户的一个线路详情 [GET /line/getOneById]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "id":0  //线路ID
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "line":{}
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+## 删除一个线路 [GET /line/deleteOneById]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "id":0  //线路ID
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+## 更新用户的一个线路详情 [GET /line/updateOneById]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "id":0，
+                "rental":0,
+                "lessee":0,
+                "startplace":"",
+                "endplace":"",
+                "center":"",
+                "remark":""
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+## 更新用户的一个线路详情 [GET /line/updateOneById]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "rental":0,
+                "lessee":0,
+                "startplace":"",
+                "endplace":"",
+                "center":"",
+                "remark":""
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
