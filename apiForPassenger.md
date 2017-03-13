@@ -27,7 +27,7 @@ FORMAT: 1A
 
 + Response 200 (application/json)
 
-    {
+        {
         "status": 1,//0为登录失败，1为登录成功
         "rental": {
             "id": 1,
@@ -41,7 +41,7 @@ FORMAT: 1A
             "positionY": 12.6146,
             "score": "0"
         }
-    }
+        }
 
 + Request <Failed> (application/json)
 
