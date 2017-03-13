@@ -534,7 +534,7 @@
   <p>此api仅用于乘客端，api调用的接口地址(url)请@oeil补充完整</p>
 
 <ul>
-<li><p>用户服务器地址：<a href="https://www.oeli.pub:80/haoyun/s/">https://www.oeli.pub:80/haoyun/s/</a></p></li>
+<li><p>用户服务器地址：<a href="http://www.oeli.pub:80/haoyun/s/">http://www.oeli.pub:80/haoyun/s/</a></p></li>
 
 <li><p>地图服务器地址：<a href="http://115.159.155.229:8123/">http://115.159.155.229:8123/</a></p></li>
 </ul>
@@ -1142,7 +1142,7 @@
                   <h3>GET</h3>
                 </div>
                 <a class="ui basic fluid green label">
-                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit}</code>
+                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit, cartype}</code>
                 </a>
               </div>
               
@@ -1204,6 +1204,19 @@
         
       </td>
       <td class="eight wide"><p>用户维度值</p>
+</td>
+    </tr>
+  
+    <tr>
+      <td class="center aligned one wide">
+        <i class="ui empty circular label black" data-content="required" data-position="top center"></i>
+      </td>
+      <td><code>cartype</code></td>
+      <td class="center aligned">
+        <code>number</code>
+        <code class="ui label">2</code>
+      </td>
+      <td class="eight wide"><p>车辆类型</p>
 </td>
     </tr>
   
@@ -1274,6 +1287,7 @@
     },
     &#34;positionX&#34;:128.6846866,
     &#34;positionY&#34;:12.6146,
+    &#34;distance&#34;: 200,   // 实际距离 200 （单位：米）
     &#34;score&#34;:&#34;0&#34;
   },
 ]
@@ -1298,7 +1312,7 @@
                   <h3>GET</h3>
                 </div>
                 <a class="ui basic fluid green label">
-                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit}</code>
+                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit, cartype}</code>
                 </a>
               </div>
               
@@ -1360,6 +1374,19 @@
         
       </td>
       <td class="eight wide"><p>用户维度值</p>
+</td>
+    </tr>
+  
+    <tr>
+      <td class="center aligned one wide">
+        <i class="ui empty circular label black" data-content="required" data-position="top center"></i>
+      </td>
+      <td><code>cartype</code></td>
+      <td class="center aligned">
+        <code>number</code>
+        <code class="ui label">2</code>
+      </td>
+      <td class="eight wide"><p>车辆类型</p>
 </td>
     </tr>
   

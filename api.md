@@ -107,7 +107,7 @@ FORMAT: 1A
 
 用于位置操作的api
 
-## 显示租车人附近的汽车 [GET /rent/{uid}/near_lessees{?token, positionx, positiony, limit}]
+## 显示租车人附近的汽车 [GET /rent/{uid}/near_lessees{?token, positionx, positiony, limit, cartype}]
 
 根据租车人与货车主的经纬度，获取租车人附近的货车主们。
 
@@ -116,6 +116,7 @@ FORMAT: 1A
     + token (string, required) - 用户token
     + positionx (number, required) - 用户经度值
     + positiony (number, required) - 用户维度值
+    + cartype: `2` (number, required) - 车辆类型
     + limit: `20` (number, required) - 范围，单位米(M)
 
 + Response 200 (application/json)
@@ -133,6 +134,7 @@ FORMAT: 1A
             },
             "positionX":128.6846866,
             "positionY":12.6146,
+            "distance": 200,   // 实际距离 200 （单位：米）
             "score":"0"
           },
         ]
