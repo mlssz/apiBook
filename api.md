@@ -103,8 +103,6 @@ FORMAT: 1A
     错误信息
 
 
-
-
 # Group 地图模块
 
 用于位置操作的api
@@ -145,8 +143,10 @@ FORMAT: 1A
         {
             "detail":"身份认证信息未提供。"
         }
+        
+# Group Websocket 更新位置
 
-
+![position](./img/websocket.png)
 
 # Group 常用线路管理
 
