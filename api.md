@@ -4,7 +4,7 @@ FORMAT: 1A
 
 此api仅用于乘客端，api调用的接口地址(url)请@oeil补充完整
 
-- 用户服务器地址：https://www.oeli.pub:80/haoyun/s/
+- 用户服务器地址：http://www.oeli.pub:80/haoyun/s/
 - 地图服务器地址：http://115.159.155.229:8123/
 
 # Group Rental用户模块
