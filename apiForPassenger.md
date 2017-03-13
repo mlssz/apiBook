@@ -27,7 +27,7 @@ FORMAT: 1A
 
 + Response 200 (application/json)
 
-    {
+        {
         "status": 1,//0为登录失败，1为登录成功
         "rental": {
             "id": 1,
@@ -41,7 +41,7 @@ FORMAT: 1A
             "positionY": 12.6146,
             "score": "0"
         }
-    }
+        }
 
 + Request <Failed> (application/json)
 
@@ -289,6 +289,7 @@ FORMAT: 1A
                 "msg":""
         }
 
+
 # 订单管理
 
 ## 获得一个订单详情 [GET /order/getOne]
@@ -427,4 +428,5 @@ FORMAT: 1A
                 "status":0,
                 "msg":""
         }
+
 
