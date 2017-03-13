@@ -48,7 +48,7 @@ FORMAT: 1A
         {
             "account": "12345678901",
             "position": "x,y",
-            "timestamp": "1484635014000"
+            "code": "1484635014000"
         }
     
 + Response 200 (application/json)
@@ -288,3 +288,143 @@ FORMAT: 1A
                 "status":0,
                 "msg":""
         }
+
+# 订单管理
+
+## 获得一个订单详情 [GET /order/getOne]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "id":0
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "order":{}
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+
+## 获得一个用户所有订单详情 [GET /order/getAll]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "rental":0
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "orders":[]
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+
+## 新建一个订单 [GET /order/insertOne]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "id":0,
+                "rental":0,
+                "lessee":0,
+                "startplace":"",
+                "endplace":"",
+                "fee":0.0,
+                "score":0
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+
+## 获得一个订单详情 [GET /order/getOne]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "id":0
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+
+## 获得一个订单详情 [GET /order/getOne]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":""
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "order":{}
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
