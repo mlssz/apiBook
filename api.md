@@ -135,6 +135,7 @@ FORMAT: 1A
             "positionX":128.6846866,
             "positionY":12.6146,
             "order_count": 23,
+            "truck": "浙A00000", // 车牌号
             "distance": 200,   // 实际距离 200 （单位：米）
             "score":"0"
           },
