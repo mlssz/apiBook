@@ -4,7 +4,7 @@ FORMAT: 1A
 
 此api仅用于乘客端，api调用的接口地址(url)请@oeil补充完整
 
-- 用户服务器地址：https://www.oeli.pub:80/haoyun/s/
+- 用户服务器地址：http://www.oeli.pub:80/haoyun/s/
 - 地图服务器地址：http://115.159.155.229:8123/
 
 # Group Rental用户模块
@@ -103,13 +103,11 @@ FORMAT: 1A
     错误信息
 
 
-
-
 # Group 地图模块
 
 用于位置操作的api
 
-## 显示租车人附近的汽车 [GET /rent/{uid}/near_lessees{?token, positionx, positiony, limit}]
+## 显示租车人附近的汽车 [GET /rent/{uid}/near_lessees{?token, positionx, positiony, limit, cartype}]
 
 根据租车人与货车主的经纬度，获取租车人附近的货车主们。
 
@@ -118,6 +116,7 @@ FORMAT: 1A
     + token (string, required) - 用户token
     + positionx (number, required) - 用户经度值
     + positiony (number, required) - 用户维度值
+    + cartype: `2` (number, required) - 车辆类型
     + limit: `20` (number, required) - 范围，单位米(M)
 
 + Response 200 (application/json)
@@ -135,6 +134,9 @@ FORMAT: 1A
             },
             "positionX":128.6846866,
             "positionY":12.6146,
+            "order_count": 23,
+            "truck": "浙A00000", // 车牌号
+            "distance": 200,   // 实际距离 200 （单位：米）
             "score":"0"
           },
         ]
@@ -145,8 +147,10 @@ FORMAT: 1A
         {
             "detail":"身份认证信息未提供。"
         }
+        
+# Group Websocket 更新位置
 
-
+![position](./img/websocket.png)
 
 # Group 常用线路管理
 
@@ -285,7 +289,6 @@ FORMAT: 1A
                 "status":0,
                 "msg":""
         }
-
 
 ## 租车人获得自己所有订单详情 [GET /order/getRentalAll]
 
@@ -585,6 +588,16 @@ FORMAT: 1A
 
 
 ## 添加一个货车 [POST /lessee/addatruck]
+
+货车类型：
+
+| car tpye | comment  |
+|   :----- | :------: |
+|        0 | 小型货车 |
+|        1 | 大型货车 |
+|        2 | 小型平板 |
+|        3 | 中型平板 |
+|        4 | 大型平板 |
 
 + Request <success> (text/html)
 

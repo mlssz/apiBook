@@ -59,6 +59,9 @@
           padding-left: 0.5rem;
         }
       }
+      .sub table {
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
@@ -144,6 +147,15 @@
       </div>
     </div>
     
+  
+</div>
+
+
+<div class="ui horizontal divider">
+  <a href="#websocket-%e6%9b%b4%e6%96%b0%e4%bd%8d%e7%bd%ae">Websocket 更新位置</a>
+</div>
+
+<div class="ui accordion fluid">
   
 </div>
 
@@ -522,7 +534,7 @@
   <p>此api仅用于乘客端，api调用的接口地址(url)请@oeil补充完整</p>
 
 <ul>
-<li><p>用户服务器地址：<a href="https://www.oeli.pub:80/haoyun/s/">https://www.oeli.pub:80/haoyun/s/</a></p></li>
+<li><p>用户服务器地址：<a href="http://www.oeli.pub:80/haoyun/s/">http://www.oeli.pub:80/haoyun/s/</a></p></li>
 
 <li><p>地图服务器地址：<a href="http://115.159.155.229:8123/">http://115.159.155.229:8123/</a></p></li>
 </ul>
@@ -1130,7 +1142,7 @@
                   <h3>GET</h3>
                 </div>
                 <a class="ui basic fluid green label">
-                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit}</code>
+                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit, cartype}</code>
                 </a>
               </div>
               
@@ -1192,6 +1204,19 @@
         
       </td>
       <td class="eight wide"><p>用户维度值</p>
+</td>
+    </tr>
+  
+    <tr>
+      <td class="center aligned one wide">
+        <i class="ui empty circular label black" data-content="required" data-position="top center"></i>
+      </td>
+      <td><code>cartype</code></td>
+      <td class="center aligned">
+        <code>number</code>
+        <code class="ui label">2</code>
+      </td>
+      <td class="eight wide"><p>车辆类型</p>
 </td>
     </tr>
   
@@ -1262,6 +1287,9 @@
     },
     &#34;positionX&#34;:128.6846866,
     &#34;positionY&#34;:12.6146,
+    &#34;order_count&#34;: 23,
+    &#34;truck&#34;: &#34;浙A00000&#34;, // 车牌号
+    &#34;distance&#34;: 200,   // 实际距离 200 （单位：米）
     &#34;score&#34;:&#34;0&#34;
   },
 ]
@@ -1286,7 +1314,7 @@
                   <h3>GET</h3>
                 </div>
                 <a class="ui basic fluid green label">
-                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit}</code>
+                  <code>/rent/{uid}/near_lessees{?token, positionx, positiony, limit, cartype}</code>
                 </a>
               </div>
               
@@ -1348,6 +1376,19 @@
         
       </td>
       <td class="eight wide"><p>用户维度值</p>
+</td>
+    </tr>
+  
+    <tr>
+      <td class="center aligned one wide">
+        <i class="ui empty circular label black" data-content="required" data-position="top center"></i>
+      </td>
+      <td><code>cartype</code></td>
+      <td class="center aligned">
+        <code>number</code>
+        <code class="ui label">2</code>
+      </td>
+      <td class="eight wide"><p>车辆类型</p>
 </td>
     </tr>
   
@@ -1426,6 +1467,17 @@
         </div>
       <div class="ui hidden divider"></div>
     
+  
+
+  <div class="ui horizontal divider" id="websocket-更新位置">
+    Websocket 更新位置
+  </div>
+  <div class="ui header center aligned">
+    <div class="ui sub header">
+      <p><figure><img src="./img/websocket.png" alt="position"></figure></p>
+
+    </div>
+  </div>
   
 
   <div class="ui horizontal divider" id="常用线路管理">
@@ -2231,7 +2283,49 @@
   </div>
   <div class="ui header center aligned">
     <div class="ui sub header">
-      
+      <p>订单状态列表：</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">order status</th>
+<th align="center">comment</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="center">保存订单</td>
+</tr>
+
+<tr>
+<td align="left">1</td>
+<td align="center">预定订单</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="center">发起订单</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="center">订单被接受</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="center">完成订单</td>
+</tr>
+
+<tr>
+<td align="left">5</td>
+<td align="center">订单未完成结束</td>
+</tr>
+</tbody>
+</table>
+
     </div>
   </div>
   
@@ -3251,7 +3345,44 @@
             <h3 class="ui block center aligned header" id="货车司机用户组-添加一个货车-添加一个货车">
               添加一个货车
             </h3>
-            <div class="description"></div>
+            <div class="description"><p>货车类型：</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">car tpye</th>
+<th align="center">comment</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="center">小型货车</td>
+</tr>
+
+<tr>
+<td align="left">1</td>
+<td align="center">大型货车</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="center">小型平板</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="center">中型平板</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="center">大型平板</td>
+</tr>
+</tbody>
+</table>
+</div>
 
             
               <h4 class="ui horizontal divider">
@@ -4025,7 +4156,7 @@
 
       </div>
     </div>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/accordion.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/tab.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/transition.min.js"></script>
