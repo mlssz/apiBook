@@ -1,0 +1,38 @@
+# Websocket Test Server
+
+## websocket基础测试服务 [WS /test/echo/]
+
+该服务器返回一切客户端发送的数据
+
++ Send (application/json)
+
+        {
+            "account": "12345678901",
+            "position": "x,y",
+            "code": "" //验证码
+        }
+
++ Recieve (application/json)
+
+        {
+            "account": "12345678901",
+            "position": "x,y",
+            "code": "" //验证码
+        }
+
+## websocket登录测试服务 [WS /test/link/{uid}/{token}/]
+
+当用户连接时，该服务器返回一个成功信息，否则返回uid和token
+
++ Recieve <Success> (application/json)
+
+        {
+            "state": 0
+        }
+
++ Recieve <Failed> (application/json)
+
+        {
+            "state": 1,
+            "error": "e.g. Failed to ..."
+        }
