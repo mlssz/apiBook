@@ -261,52 +261,10 @@ FORMAT: 1A
                 "msg":""
         }
 
-## 更新用户的一个线路详情 [GET /line/updateOneById]
-
-+ Request <success> (text/html)
-
-        {
-                "uid":0,
-                "token":"",
-                "rental":0,
-                "lessee":0,
-                "startplace":"",
-                "endplace":"",
-                "center":"",
-                "remark":""
-        }
-
-+ Response 200 (application/json)
-
-        //成功
-
-        {
-                "status":1
-        }
-
-        //失败
-
-        {
-                "status":0,
-                "msg":""
-        }
-
 
 # Group 订单管理
 
-订单状态列表：
-
-| order status | comment        |
-| :----------- | :---------:    |
-|            0 | 保存订单       |
-|            1 | 预定订单       |
-|            2 | 发起订单       |
-|            3 | 订单被接受     |
-|            4 | 完成订单       |
-|            5 | 订单未完成结束 |
-
-
-## 获得一个订单详情 [GET /order/getOne]
+## 通过ID获得一个订单详情 [GET /order/getOneById]
 
 + Request <success> (text/html)
 
@@ -332,8 +290,7 @@ FORMAT: 1A
                 "msg":""
         }
 
-
-## 获得一个用户所有订单详情 [GET /order/getAll]
+## 租车人获得自己所有订单详情 [GET /order/getRentalAll]
 
 + Request <success> (text/html)
 
@@ -360,20 +317,45 @@ FORMAT: 1A
         }
 
 
-## 新建一个订单 [GET /order/insertOne]
+## 司机获得自己所有订单详情 [GET /order/getLesseeAll]
 
 + Request <success> (text/html)
 
         {
                 "uid":0,
                 "token":"",
-                "id":0,
-                "rental":0,
-                "lessee":0,
+                "lessee":0
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "orders":[]
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+
+## 租车人新建一个订单 [GET /order/createOne]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
                 "startplace":"",
+                "startplacex":0,
+                "startplacey":0,
                 "endplace":"",
-                "fee":0.0,
-                "score":0
+                "fee":0.0
         }
 
 + Response 200 (application/json)
@@ -391,6 +373,88 @@ FORMAT: 1A
                 "msg":""
         }
 
+## 司机查询附近的订单 [GET /order/getNearAll]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "placex":0.0,
+                "placey":0.0,
+                "radius":0.0  //范围多大的园半径，单位：米（m）
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "orders":[]
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+## 司机接受订单 [GET /order/acceptOne]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "id":0
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "orders":[]
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+
+## 租车人确认货物到达目的地 [GET /order/confirmOne]
+
++ Request <success> (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "id":0,
+                "score":0,
+                "remark":""
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "orders":[]
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
 
 
 # Group 货车司机用户组
