@@ -401,14 +401,13 @@ FORMAT: 1A
                 "msg":""
         }
 
-## 司机接受订单 [GET /order/acceptOne]
+## 司机接受订单 [POST /order/{id}/]
 
-+ Request <success> (text/html)
++ Request (text/html)
 
         {
                 "uid":0,
                 "token":"",
-                "id":0
         }
 
 + Response 200 (application/json)
@@ -417,7 +416,6 @@ FORMAT: 1A
 
         {
                 "status":1,
-                "orders":[]
         }
 
         //失败
