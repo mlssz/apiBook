@@ -1,0 +1,89 @@
+# Websocket Test Server
+
+- 服务器地址：http://115.159.155.229:8123/
+
+## websocket基础测试服务 [WS /test/echo/]
+
+该服务器返回一切客户端发送的数据
+
++ Send (json)
+
+        {
+            "account": "12345678901",
+            "position": "x,y",
+            "code": "" //验证码
+        }
+
++ Recieve (json)
+
+        {
+            "account": "12345678901",
+            "position": "x,y",
+            "code": "" //验证码
+        }
+
+## websocket登录测试服务 [WS /test/link/{uid}/{token}/]
+
+当用户连接时，该服务器返回一个成功信息，否则返回uid和token
+
++ Recieve <Success> (json)
+
+        {
+            "state": 0
+        }
+
++ Recieve <Failed> (json)
+
+        {
+            "state": 1,
+            "error": "e.g. Failed to ..."
+        }
+
+
+## websocket订单服务 [WS /{uid}/{token}/]
+
+### 发送用户当前位置
+
++ Send (json)
+
+        {
+            "action": 99,
+            "positionx": 123.12,
+            "positiony": 321.21,
+        }
+        
+
+### 得到可接的订单（货车主）
+
++ Recieve (json)
+        
+        {
+            "action": 1,
+            "orders": [
+                {
+                    "id": 1,
+                    "starttime": 123,
+                    "endtime": 123,
+                    "startplace": "冬木市",
+                    "startplacey": 123.123,
+                    "startplacex": 213.23,
+                    "endplace": "艾因茨贝伦城堡",
+                    "fee": 123,
+                    "score": 123,
+                    "accepttime": 123,
+                    "finishtime": 123,
+                    "remark": 1213,
+                    "trucktype": 2,
+                    "status": 123,
+                    "lessee": 213,
+                    "rental": {
+                        "account": "2314723", 
+                        "name": "45678", 
+                        "position_x": 14.2,
+                        "position_y": 32.23,
+                        "score": 5
+                    }
+                },
+                ...
+            ]
+        }

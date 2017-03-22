@@ -263,6 +263,16 @@ FORMAT: 1A
 
 
 # Group 订单管理
+ 
+| state | verbose        |
+|  :--- | ----:          |
+|     0 | 系统选车订单   |
+|     1 | 自主选车订单   |
+|     2 | 长期订单       |
+|     3 | 订单被接受     |
+|     4 | 完成订单       |
+|     5 | 订单未完成结束 |
+|     6 | 预约订单       |
 
 ## 通过ID获得一个订单详情 [GET /order/getOneById]
 
@@ -401,14 +411,13 @@ FORMAT: 1A
                 "msg":""
         }
 
-## 司机接受订单 [GET /order/acceptOne]
+## 司机接受订单 [POST /order/{id}/]
 
-+ Request <success> (text/html)
++ Request (text/html)
 
         {
                 "uid":0,
                 "token":"",
-                "id":0
         }
 
 + Response 200 (application/json)
@@ -417,7 +426,6 @@ FORMAT: 1A
 
         {
                 "status":1,
-                "orders":[]
         }
 
         //失败
