@@ -296,8 +296,7 @@ FORMAT: 1A
 
         {
                 "uid":0,
-                "token":"",
-                "rental":0
+                "token":""
         }
 
 + Response 200 (application/json)
@@ -323,8 +322,7 @@ FORMAT: 1A
 
         {
                 "uid":0,
-                "token":"",
-                "lessee":0
+                "token":""
         }
 
 + Response 200 (application/json)
@@ -355,6 +353,8 @@ FORMAT: 1A
                 "startplacex":0,
                 "startplacey":0,
                 "endplace":"",
+                "starttime":0,
+                "status":0,
                 "fee":0.0
         }
 
