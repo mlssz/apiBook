@@ -73,6 +73,7 @@
                     "accepttime": 123,
                     "finishtime": 123,
                     "remark": 1213,
+                    "trucktype": 2,
                     "status": 123,
                     "lessee": 213,
                     "rental": {
