@@ -76,9 +76,9 @@
                     "trucktype": 2,
                     "status": 123,
                     "lessee": 213,
+                    "distance": 2333, // 米
                     "rental": {
                         "account": "2314723", 
-                        "name": "45678", 
                         "position_x": 14.2,
                         "position_y": 32.23,
                         "score": 5
