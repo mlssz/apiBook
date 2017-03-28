@@ -361,6 +361,7 @@ FORMAT: 1A
                 "endplace":"",
                 "starttime":0,
                 "status":0,
+                "trucktype":0,
                 "fee":0.0
         }
 
@@ -369,7 +370,8 @@ FORMAT: 1A
         //成功
 
         {
-                "status":1
+                "status":1,
+                "order":{}
         }
 
         //失败
@@ -407,13 +409,14 @@ FORMAT: 1A
                 "msg":""
         }
 
-## 司机接受订单 [POST /order/{id}/]
+## 系统接单中的司机抢单 [POST /order/lesseechoose]
 
 + Request (text/html)
 
         {
                 "uid":0,
                 "token":"",
+                "orderid":0
         }
 
 + Response 200 (application/json)
@@ -421,7 +424,7 @@ FORMAT: 1A
         //成功
 
         {
-                "status":1,
+                "status":1
         }
 
         //失败
@@ -431,6 +434,82 @@ FORMAT: 1A
                 "msg":""
         }
 
+## 自主接单中的司机抢单 [POST /order/rentchoose]
+
++ Request (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "orderid":0
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+## 自主接单中的租车人查看订单状态 [POST /order/rentchoosestatus]
+
++ Request (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "orderid":0
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1,
+                "lessees":[]
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
+
+## 自主接单中的租车人选择司机 [POST /order/rentchoosealessee]
+
++ Request (text/html)
+
+        {
+                "uid":0,
+                "token":"",
+                "orderid":0,
+                "lessee":0
+        }
+
++ Response 200 (application/json)
+
+        //成功
+
+        {
+                "status":1
+        }
+
+        //失败
+
+        {
+                "status":0,
+                "msg":""
+        }
 
 ## 租车人确认货物到达目的地 [GET /order/confirmOne]
 
@@ -439,7 +518,7 @@ FORMAT: 1A
         {
                 "uid":0,
                 "token":"",
-                "id":0,
+                "orderid":0,
                 "score":0,
                 "remark":""
         }
