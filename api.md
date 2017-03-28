@@ -148,10 +148,6 @@ FORMAT: 1A
             "detail":"身份认证信息未提供。"
         }
         
-# Group Websocket 更新位置
-
-![position](./img/websocket.png)
-
 # Group 常用线路管理
 
 ## 获得一个用户所有的线路 [GET /line/getAllByUserId]
